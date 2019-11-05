@@ -1,0 +1,16 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLoveStatus > 0,
+                'list-group-item-danger': postLoveStatus < 0,
+                ' ': postLoveStatus === 0}">
+    <div class="card" style="width: auto;">
+        <div class="card-body">
+            <div class="flex-container card-title">
+                <h2>{{postTitle}}</h2>
+                <h6>{{postDate | date: 'short'}}</h6>
+            </div>
+            <p class="card-text">{{postContent}}</p>
+            <button class="btn btn-success" (click)="onLove()"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+            <button class="btn btn-danger" (click)="onUnlike()"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+        </div>
+    </div>
+</li>
