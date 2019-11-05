@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostListItemComponent implements OnInit {
 
-  //appareilName: string = 'Machine à laver';
   @Input() postTitle: string;
   @Input() postDate: string;
   @Input() postContent: string;
